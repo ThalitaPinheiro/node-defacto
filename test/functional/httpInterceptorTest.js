@@ -2,7 +2,7 @@
 
 var assert = require('assert'),
     promiseIt = require('./testHelpers').promiseIt,
-    interceptor = require('../src/httpInterceptor'),
+    interceptor = require('../../src/httpInterceptor'),
     httpClient = require('./httpClient'),
     httpServer = require('./httpServer');
 

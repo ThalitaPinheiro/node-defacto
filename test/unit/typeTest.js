@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('assert'),
-    type = require('../src/type');
+    type = require('../../src/type');
 
 describe('type', function () {
     describe('#of', function () {

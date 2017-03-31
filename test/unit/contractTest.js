@@ -1,8 +1,8 @@
 'use strict';
 
 var assert = require('assert'),
-    Templatizer = require('../src/templatizer'),
-    Contract = require('../src/contract');
+    Templatizer = require('../../src/templatizer'),
+    Contract = require('../../src/contract');
 
 describe('contract', function () {
     describe('#merge', function () {

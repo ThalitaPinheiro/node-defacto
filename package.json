@@ -16,17 +16,24 @@
     "test",
     "contract"
   ],
+  "scripts": {
+    "all": "",
+    "unit": "_mocha test/unit/**/*.js",
+    "functional": "_mocha test/functionalTest/**/*.js",
+    "version": "echo 'Using version ' && grep version ./package.json | cut -f 4 -d ' ' | head -1",
+    "check": "./node_modules/.bin/eslint src/** test/**/**;",
+    "mocha": "_mocha --recursive",
+    "debug": "_mocha  --recursive --debug-brk",
+    "coverage": "istanbul cover --print both _mocha -- -R spec --recursive",
+    "test": "export NODE_ENV=test && npm run coverage",
+    "posttest": "./node_modules/.bin/istanbul check-coverage --statements 60 --branches 60 --functions 60"
+  },
   "dependencies": {
     "q": "~1.4.1"
   },
   "devDependencies": {
     "mocha": "~3.2.0",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-eslint": "^19.0.0",
-    "grunt-mocha-test": "~0.13.2",
-    "istanbul": "^0.4.0",
-    "time-grunt": "^1.2.2"
+    "istanbul": "^0.4.0"
   },
   "engines": {
     "node": ">=4.0"

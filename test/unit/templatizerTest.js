@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('assert'),
-    Templatizer = require('../src/templatizer');
+    Templatizer = require('../../src/templatizer');
 
 describe('templatizer', function () {
     describe('#test', function () {
